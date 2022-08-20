@@ -1,10 +1,12 @@
 let arrayItems = []; //se crea un array para almacenar los items
-let cantidadItems=0;// se crea un contados para guardar la cantidad de items
+let cantidadItems=0;
+// se crea un contados para guardar la cantidad de items
 
 
 //creamos la funcion que escucha el boton de AGREGAR
  
  function AgregarItems(){
+   
      contenedorItems=document.getElementById('divcontenedor');contenedorItems.style.backgroundColor='#BEF4F9';
            /*obtenemos el valor de item que es el input 
           donde ingresamos los items 
@@ -55,7 +57,7 @@ let cantidadItems=0;// se crea un contados para guardar la cantidad de items
           arrayItems = [];
           cantidadItems = 0;
           //Elimino cada elemento de clase itemLista, o sea los items que envie al listado
-          document.querySelectorAll('.itemLista').forEach((el) => el.remove());;
+          document.querySelectorAll('.itemLista').forEach((element) => element.remove());;
 
      }
  
