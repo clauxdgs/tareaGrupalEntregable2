@@ -1,11 +1,9 @@
 let arrayItems = []; //se crea un array para almacenar los items
-//let cantidadItems=0;// se crea un contados para guardar la cantidad de itemsdocument.addEventListener
-// document.addEventListener("DOMContentLoaded", function(e){
-//      document.getElementById('body').addEventListener('onload',inicio())
-// });
 
-// body.addEventListener('load', function() {
-//      console.log('La página ha terminado de cargarse!!');
+//let cantidadItems=0;// se crea un contados para guardar la cantidad de itemsdocument.addEventListener
+
+
+//comprobar si hay datos guardados en localstorage al iniciar la pagina y mostrarlos en la lista
      if (localStorage.getItem('Item') != null) {
           let htmlContentToAppend="";
 
