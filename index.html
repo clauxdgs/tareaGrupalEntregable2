@@ -20,16 +20,16 @@
           <label for="Item" class="form-label">Nuevo ítem:</label>
           <input type="text" class="form-control" id="item">
           <div class="d-grid">
-            <button type="button" class="btn btn-primary my-3" id="agregar" onclick="AgregarItems();">Agregar</button>
+            <button type="button" class="btn btn-primary my-3" id="agregar" onclick="AgregarItems(),   document.getElementById('item').value='';">Agregar</button>
           </div>
         </div>
         <div class="col-sm-8">
-          <div class="border rounded-3 cont">
+          <div class="border rounded-3 cont" id="divcontenedor">
             <ul class="list-group" id="contenedor">
             </ul>
           </div>
           <div class="float-end">
-            <button type="button" class="btn btn-outline-danger my-3" id="limpiar" onclick="LimpiarItems();">Limpiar</button>
+            <button type="button" class="btn btn-outline-danger my-3" id="limpiar" onclick="limpiarItems()">Limpiar</button>
           </div>
         </div>
       </div>
