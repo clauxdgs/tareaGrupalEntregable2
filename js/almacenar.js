@@ -49,9 +49,12 @@ let cantidadItems=0;// se crea un contados para guardar la cantidad de items
 
 //Creamos la funcion para Limpiar el campo donde se listan nuestros items
      function limpiarItems(){
+          //limpio el localstorage
           localStorage.clear();
+          //limpio el array de items y tb reseteo el conteo de items
           arrayItems = [];
           cantidadItems = 0;
+          //Elimino cada elemento de clase itemLista, o sea los items que envie al listado
           document.querySelectorAll('.itemLista').forEach((el) => el.remove());;
 
      }
