@@ -8,10 +8,7 @@ let message = document.querySelector("#contenedor") //Creo variable para funcion
 //comprobar si hay datos guardados en localstorage al iniciar la pagina y mostrarlos en la lista
      if (localStorage.getItem('Item') != null) {
           let htmlContentToAppend="";
-          let elemento = document.getElementById("item").value;
-              if(elemento === ""){
-               showError("El campo esta vacío");
-               return; //Muestra mensaje error si se le da enviar y está vacío el campo
+          
 
           arrayItems = JSON.parse(localStorage.getItem('Item'));
           let aItems = JSON.parse(localStorage.getItem('Item'));
@@ -32,7 +29,18 @@ let message = document.querySelector("#contenedor") //Creo variable para funcion
 // document.body.onload = function{
    
 //}
+          function registrarElemento(){
+          let elemento = document.getElementById("item").value;
+          if(elemento === ""){
+          showError("El campo esta vacío");
+          return;
 
+          }
+    elementos.push(elemento);
+    localStorage.setItem("nombre_elemento", JSON.stringify(elementos));
+
+    console.log(elemento);
+}
           function showError(error){
           const messageError = document.createElement("p");
           messageError.textContent = error;
