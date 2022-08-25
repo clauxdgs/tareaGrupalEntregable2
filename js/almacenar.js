@@ -26,35 +26,7 @@ let arrayItems = []; //se crea un array para almacenar los items
 //  });
 // document.body.onload = function{
    
-//}
-
-let message = document.querySelector("#item") //Creo variable para funcion de error.
-
-          function registrarElemento(){
-          let item = document.getElementById("item").value;
-          if(item === ""){
-          showError("El campo esta vacío");
-          return;
-
-
-               }
-          }
-          function showError(error){
-          let messageError = document.createElement("p");
-          messageError.textContent = error;
-          messageError.classList.add("error") //Función para que nos marque error, durante 2000 milesimas de seg (2seg)
-
-          message.appendChild(messageError)
-
-          setTimeout(() => {
-          messageError.remove();
-          },2000);
-          console.log(error);
-    
-          }
-          
-          
-          
+//} 
           
 //creamos la funcion que escucha el boton de AGREGAR
  
@@ -119,6 +91,35 @@ if(localStorage.getItem('Item')!= null){
           document.querySelectorAll('.itemLista').forEach((el) => el.remove());;
 
      }
+
+
+cont message = document.querySelector("#contenedor") //Creo variable para funcion de error.
+function registrarElemento(){
+    let elemento = document.getElementById("item").value;
+    if(elemento === ""){
+        showError("El campo esta vacío");
+        return;
+
+    }
+    elementos.push(elemento);
+    localStorage.setItem("nombre_elemento", JSON.stringify(elementos));
+
+    console.log(elemento);
+}
+          }
+function showError(error){
+    const messageError = document.createElement("p");
+    messageError.textContent = error;
+    messageError.classList.add("error") 
+
+    message.appendChild(messageError)
+
+    setTimeout(() => {
+        messageError.remove();
+    },2000);
+    console.log(error);
+    
+}
  
 
  
