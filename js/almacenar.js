@@ -1,11 +1,16 @@
 let arrayItems = []; //se crea un array para almacenar los items
 
+let message = document.querySelector("#contenedor") //Creo variable para funcion de error.
+
 //let cantidadItems=0;// se crea un contados para guardar la cantidad de itemsdocument.addEventListener
 
 
 //comprobar si hay datos guardados en localstorage al iniciar la pagina y mostrarlos en la lista
      if (localStorage.getItem('Item') != null) {
           let htmlContentToAppend="";
+              if(elemento === ""){
+               showError("El campo esta vacío");
+               return; //Muestra mensaje error si se le da enviar y está vacío el campo
 
           arrayItems = JSON.parse(localStorage.getItem('Item'));
           let aItems = JSON.parse(localStorage.getItem('Item'));
@@ -27,6 +32,23 @@ let arrayItems = []; //se crea un array para almacenar los items
    
 //}
 
+          function showError(error){
+          const messageError = document.createElement("p");
+          messageError.textContent = error;
+          messageError.classList.add("error") //Función para que nos marque error, durante 2000 milesimas de seg (2seg)
+
+          message.appendChild(messageError)
+
+          setTimeout(() => {
+          messageError.remove();
+          },2000);
+          console.log(error);
+    
+          }
+          
+          
+          
+          
 //creamos la funcion que escucha el boton de AGREGAR
  
  function AgregarItems(){
