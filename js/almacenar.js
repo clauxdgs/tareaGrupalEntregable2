@@ -8,6 +8,7 @@ let message = document.querySelector("#contenedor") //Creo variable para funcion
 //comprobar si hay datos guardados en localstorage al iniciar la pagina y mostrarlos en la lista
      if (localStorage.getItem('Item') != null) {
           let htmlContentToAppend="";
+          let elemento = document.getElementById("item").value;
               if(elemento === ""){
                showError("El campo esta vacío");
                return; //Muestra mensaje error si se le da enviar y está vacío el campo
