@@ -1,7 +1,5 @@
 let arrayItems = []; //se crea un array para almacenar los items
 
-let message = document.querySelector("#contenedor") //Creo variable para funcion de error.
-
 //let cantidadItems=0;// se crea un contados para guardar la cantidad de itemsdocument.addEventListener
 
 
@@ -29,20 +27,20 @@ let message = document.querySelector("#contenedor") //Creo variable para funcion
 // document.body.onload = function{
    
 //}
+
+let message = document.querySelector("#item") //Creo variable para funcion de error.
+
           function registrarElemento(){
-          let elemento = document.getElementById("item").value;
-          if(elemento === ""){
+          let item = document.getElementById("item").value;
+          if(item === ""){
           showError("El campo esta vacío");
           return;
 
-          }
-    elementos.push(elemento);
-    localStorage.setItem("nombre_elemento", JSON.stringify(elementos));
 
-    console.log(elemento);
-}
+               }
+          }
           function showError(error){
-          const messageError = document.createElement("p");
+          let messageError = document.createElement("p");
           messageError.textContent = error;
           messageError.classList.add("error") //Función para que nos marque error, durante 2000 milesimas de seg (2seg)
 
