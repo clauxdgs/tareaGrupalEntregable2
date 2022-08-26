@@ -88,7 +88,7 @@ if(localStorage.getItem('Item')!= null){
           arrayItems = [];
           //cantidadItems = 0;
           //Elimino cada elemento de clase itemLista, o sea los items que envie al listado
-          document.querySelectorAll('.itemLista').forEach((el) => el.remove());;
+          document.querySelectorAll('.itemLista').forEach((elemento) => elemento.remove());;
 
      }
  
