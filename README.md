@@ -1,4 +1,4 @@
 # tareaGrupalEntregable2
 Claudia Guevara
-Milagros
+Milagros Lemes
 Andrea Saavedra
