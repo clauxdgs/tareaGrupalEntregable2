@@ -33,7 +33,8 @@ if(localStorage.getItem('Item')!= null){
      arrayItems=JSON.parse(localStorage.getItem('Item'));
 }
 
-     contenedorItems=document.getElementById('divcontenedor');contenedorItems.style.backgroundColor='#BEF4F9';
+     contenedorItems=document.getElementById('divcontenedor');
+     contenedorItems.style.backgroundColor='#BEF4F9';
            /*obtenemos el valor de item que es el input 
           donde ingresamos los items 
           a listar y los almacenamos 
@@ -47,14 +48,8 @@ if(localStorage.getItem('Item')!= null){
           let htmlContentToAppend="";
 
           //verificamos que el contenido del input item no sea 0 y si no es cero lo almacenamos en el arrat de items con PUSH
-          if(item !== ""){ 
-               
-          //cantidadItems++; //empezamos al ingresar un item con 1
-
-               //console.log(cantidadItems); 
-
-          //seteo cada item ingresado con el numero de dato que corresponde a su ingreso, del 1 para adelante y lo envio a localStorage.
-               
+          if(item !== ""){
+                       
           
           //Almaceno el item en el array de items
                arrayItems.push(item);
@@ -62,7 +57,9 @@ if(localStorage.getItem('Item')!= null){
                localStorage.setItem('Item', JSON.stringify(arrayItems));
           
                console.log(arrayItems);
-      }
+      }else{
+          alert('Ingrese un dato');
+      }      
       //obtengo el array de items con json.parse para que el contenido de localstorage sea un array y no texto como lo seteamos anteriormente constringify
       let aItems = JSON.parse(localStorage.getItem('Item'));
       //almacenamos el tamaño del array de items en cantidadItems
